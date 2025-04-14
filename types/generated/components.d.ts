@@ -8,6 +8,9 @@ export interface MenuMenu extends Struct.ComponentSchema {
     icon: 'filter';
   };
   attributes: {
+    background_menu: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     logo: Schema.Attribute.Media<'images'>;
     logo_link: Schema.Attribute.Text & Schema.Attribute.Required;
     logo_text: Schema.Attribute.String &

@@ -20,12 +20,19 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "menu_links": {
       "type": "component",
       "repeatable": true,
       "component": "menu.menu-links",
+      "required": true
+    },
+    "background_menu": {
+      "type": "boolean",
+      "default": false,
       "required": true
     }
   }
