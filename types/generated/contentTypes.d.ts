@@ -388,6 +388,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
       Schema.Attribute.Private;
+    logo_favicon: Schema.Attribute.Media<'images'>;
     menu: Schema.Attribute.Component<'menu.menu', false>;
     publishedAt: Schema.Attribute.DateTime;
     sections: Schema.Attribute.DynamicZone<

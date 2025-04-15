@@ -41,6 +41,14 @@
       "type": "component",
       "repeatable": false,
       "component": "menu.menu"
+    },
+    "logo_favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
