@@ -1,5 +1,43 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface FooterFooter extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footers';
+  info: {
+    description: '';
+    displayName: 'footer';
+  };
+  attributes: {
+    footer_links: Schema.Attribute.Component<'footer.footer-links', true>;
+    footer_logo: Schema.Attribute.Component<'footer.footer-logo', false>;
+  };
+}
+
+export interface FooterFooterLinks extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footer_links';
+  info: {
+    description: '';
+    displayName: 'footer_links';
+    icon: 'link';
+  };
+  attributes: {
+    link_footer: Schema.Attribute.String;
+  };
+}
+
+export interface FooterFooterLogo extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footer_logos';
+  info: {
+    description: '';
+    displayName: 'footer_logo';
+  };
+  attributes: {
+    logo_footer: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    text_logo: Schema.Attribute.String;
+  };
+}
+
 export interface MenuMenu extends Struct.ComponentSchema {
   collectionName: 'components_menu_menus';
   info: {
@@ -153,6 +191,9 @@ export interface SectionTextGrid extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'footer.footer': FooterFooter;
+      'footer.footer-links': FooterFooterLinks;
+      'footer.footer-logo': FooterFooterLogo;
       'menu.menu': MenuMenu;
       'menu.menu-links': MenuMenuLinks;
       'section.image-grid': SectionImageGrid;
