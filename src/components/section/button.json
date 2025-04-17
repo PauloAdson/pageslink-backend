@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_section_buttons",
+  "info": {
+    "displayName": "button",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text_button": {
+      "type": "string",
+      "default": "Insira o texto do botão",
+      "required": true
+    },
+    "link_button": {
+      "type": "string",
+      "default": "#",
+      "required": true
+    },
+    "open_in_new_tab": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "color_text": {
+      "type": "string",
+      "default": "#FFFFFF",
+      "required": true
+    },
+    "color_text_hover": {
+      "type": "string",
+      "default": "#e4e1e1",
+      "required": true
+    },
+    "uppercase": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "color_button": {
+      "type": "string",
+      "default": "#37d145",
+      "required": true
+    },
+    "color_button_hover": {
+      "type": "string",
+      "default": "#1f9228",
+      "required": true
+    }
+  }
+}

@@ -26,6 +26,11 @@
       "repeatable": false,
       "component": "section.section-metadata",
       "required": true
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.button"
     }
   }
 }

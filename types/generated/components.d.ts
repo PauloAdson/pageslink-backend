@@ -5,6 +5,7 @@ export interface FooterFooter extends Struct.ComponentSchema {
   info: {
     description: '';
     displayName: 'footer';
+    icon: 'arrowDown';
   };
   attributes: {
     footer_links: Schema.Attribute.Component<'footer.footer-links', true>;
@@ -76,6 +77,39 @@ export interface MenuMenuLinks extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionButton extends Struct.ComponentSchema {
+  collectionName: 'components_section_buttons';
+  info: {
+    description: '';
+    displayName: 'button';
+    icon: 'cursor';
+  };
+  attributes: {
+    color_button: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#37d145'>;
+    color_button_hover: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#1f9228'>;
+    color_text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#FFFFFF'>;
+    color_text_hover: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#e4e1e1'>;
+    link_button: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#'>;
+    open_in_new_tab: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    text_button: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Insira o texto do bot\u00E3o'>;
+    uppercase: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+  };
+}
+
 export interface SectionImageGrid extends Struct.ComponentSchema {
   collectionName: 'components_section_image_grids';
   info: {
@@ -90,9 +124,11 @@ export interface SectionImageGrid extends Struct.ComponentSchema {
 export interface SectionSectionContent extends Struct.ComponentSchema {
   collectionName: 'components_section_section_contents';
   info: {
+    description: '';
     displayName: 'section_content';
   };
   attributes: {
+    button: Schema.Attribute.Component<'section.button', false>;
     content: Schema.Attribute.RichText & Schema.Attribute.Required;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
       Schema.Attribute.Required;
@@ -108,6 +144,7 @@ export interface SectionSectionGrid extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
+    button: Schema.Attribute.Component<'section.button', false>;
     description: Schema.Attribute.String & Schema.Attribute.Required;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
       Schema.Attribute.Required;
@@ -124,6 +161,7 @@ export interface SectionSectionGridGallery extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
+    button: Schema.Attribute.Component<'section.button', true>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     gallery: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
@@ -164,6 +202,7 @@ export interface SectionSectionTwoColumns extends Struct.ComponentSchema {
     displayName: 'section_two_columns';
   };
   attributes: {
+    button: Schema.Attribute.Component<'section.button', false>;
     description: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
@@ -196,6 +235,7 @@ declare module '@strapi/strapi' {
       'footer.footer-logo': FooterFooterLogo;
       'menu.menu': MenuMenu;
       'menu.menu-links': MenuMenuLinks;
+      'section.button': SectionButton;
       'section.image-grid': SectionImageGrid;
       'section.section-content': SectionSectionContent;
       'section.section-grid': SectionSectionGrid;

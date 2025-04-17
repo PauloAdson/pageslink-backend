@@ -1,7 +1,8 @@
 {
   "collectionName": "components_section_section_contents",
   "info": {
-    "displayName": "section_content"
+    "displayName": "section_content",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,6 +19,11 @@
       "repeatable": false,
       "component": "section.section-metadata",
       "required": true
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.button"
     }
   }
 }
