@@ -31,9 +31,7 @@
       "required": true
     },
     "background_menu": {
-      "type": "boolean",
-      "default": false,
-      "required": true
+      "type": "string"
     }
   }
 }

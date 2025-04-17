@@ -47,9 +47,7 @@ export interface MenuMenu extends Struct.ComponentSchema {
     icon: 'filter';
   };
   attributes: {
-    background_menu: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
+    background_menu: Schema.Attribute.String;
     logo: Schema.Attribute.Media<'images'>;
     logo_link: Schema.Attribute.Text & Schema.Attribute.Required;
     logo_text: Schema.Attribute.String &
@@ -173,13 +171,13 @@ export interface SectionSectionGridGallery extends Struct.ComponentSchema {
 export interface SectionSectionMetadata extends Struct.ComponentSchema {
   collectionName: 'components_section_section_metadata';
   info: {
+    description: '';
     displayName: 'section_metadata';
     icon: 'database';
   };
   attributes: {
-    background: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<false>;
+    color_background: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'#0A1128'>;
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{

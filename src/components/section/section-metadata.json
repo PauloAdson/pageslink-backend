@@ -2,7 +2,8 @@
   "collectionName": "components_section_section_metadata",
   "info": {
     "displayName": "section_metadata",
-    "icon": "database"
+    "icon": "database",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,10 +20,10 @@
       "minLength": 3,
       "regex": "^[a-zA-Z]+([0-9-]*[a-zA-Z]+)*$"
     },
-    "background": {
-      "type": "boolean",
-      "default": false,
-      "required": true
+    "color_background": {
+      "type": "string",
+      "default": "#0A1128",
+      "required": false
     }
   }
 }
