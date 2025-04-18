@@ -159,7 +159,7 @@ export interface SectionSectionGridGallery extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    button: Schema.Attribute.Component<'section.button', true>;
+    button: Schema.Attribute.Component<'section.button', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     gallery: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
