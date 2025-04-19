@@ -47,8 +47,12 @@ export interface MenuMenu extends Struct.ComponentSchema {
     icon: 'filter';
   };
   attributes: {
-    background_menu: Schema.Attribute.String;
-    color_text: Schema.Attribute.String;
+    background_menu: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#FFFFFF'>;
+    color_text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'#0A1128'>;
     logo: Schema.Attribute.Media<'images'>;
     logo_link: Schema.Attribute.Text & Schema.Attribute.Required;
     logo_text: Schema.Attribute.String &
@@ -128,7 +132,9 @@ export interface SectionSectionContent extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.Component<'section.button', false>;
-    content: Schema.Attribute.RichText & Schema.Attribute.Required;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Insira o seu conte\u00FAdo aqui.'>;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -144,11 +150,15 @@ export interface SectionSectionGrid extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.Component<'section.button', false>;
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Descri\u00E7\u00E3o da se\u00E7\u00E3o grid.'>;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
       Schema.Attribute.Required;
     text_grid: Schema.Attribute.Component<'section.text-grid', true>;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'T\u00EDtulo da Se\u00E7\u00E3o Grid'>;
   };
 }
 
@@ -161,11 +171,15 @@ export interface SectionSectionGridGallery extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.Component<'section.button', false>;
-    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Descri\u00E7\u00E3o da se\u00E7\u00E3o galeria.'>;
     gallery: Schema.Attribute.Media<'images', true> & Schema.Attribute.Required;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
       Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'T\u00EDtulo da Se\u00E7\u00E3o Galeria'>;
   };
 }
 
@@ -178,6 +192,7 @@ export interface SectionSectionMetadata extends Struct.ComponentSchema {
   };
   attributes: {
     color_background: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'#FFFFFF'>;
     color_text: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -186,13 +201,11 @@ export interface SectionSectionMetadata extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 255;
-        minLength: 3;
       }>;
     section_id: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 50;
-        minLength: 3;
       }>;
   };
 }
@@ -205,7 +218,9 @@ export interface SectionSectionTwoColumns extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.Component<'section.button', false>;
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Descri\u00E7\u00E3o da se\u00E7\u00E3o two columns'>;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     metadata: Schema.Attribute.Component<'section.section-metadata', false> &
       Schema.Attribute.Required;
@@ -213,19 +228,24 @@ export interface SectionSectionTwoColumns extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 255;
-        minLength: 3;
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<'T\u00EDtulo da Se\u00E7\u00E3o Two Columns'>;
   };
 }
 
 export interface SectionTextGrid extends Struct.ComponentSchema {
   collectionName: 'components_section_text_grids';
   info: {
+    description: '';
     displayName: 'text-grid';
   };
   attributes: {
-    description: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Descri\u00E7\u00E3o do conte\u00FAdo'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'T\u00EDtulo do conte\u00FAdo'>;
   };
 }
 

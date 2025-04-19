@@ -10,20 +10,18 @@
     "name": {
       "type": "string",
       "required": true,
-      "maxLength": 255,
-      "minLength": 3
+      "maxLength": 255
     },
     "section_id": {
       "type": "string",
       "required": true,
       "maxLength": 50,
-      "minLength": 3,
       "regex": "^[a-zA-Z]+([0-9-]*[a-zA-Z]+)*$"
     },
     "color_background": {
       "type": "string",
       "default": "#FFFFFF",
-      "required": false
+      "required": true
     },
     "color_text": {
       "type": "string",

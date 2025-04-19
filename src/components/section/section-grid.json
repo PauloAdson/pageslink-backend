@@ -9,11 +9,13 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "Título da Seção Grid"
     },
     "description": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "Descrição da seção grid."
     },
     "text_grid": {
       "type": "component",

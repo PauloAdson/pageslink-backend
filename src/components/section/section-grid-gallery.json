@@ -17,11 +17,13 @@
     },
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "Título da Seção Galeria"
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": true,
+      "default": "Descrição da seção galeria."
     },
     "metadata": {
       "type": "component",

@@ -9,12 +9,13 @@
     "title": {
       "type": "string",
       "required": true,
-      "minLength": 3,
-      "maxLength": 255
+      "maxLength": 255,
+      "default": "Título da Seção Two Columns"
     },
     "description": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "Descrição da seção two columns"
     },
     "image": {
       "type": "media",

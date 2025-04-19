@@ -31,10 +31,14 @@
       "required": true
     },
     "background_menu": {
-      "type": "string"
+      "type": "string",
+      "default": "#FFFFFF",
+      "required": true
     },
     "color_text": {
-      "type": "string"
+      "type": "string",
+      "default": "#0A1128",
+      "required": true
     }
   }
 }

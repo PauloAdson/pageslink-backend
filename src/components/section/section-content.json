@@ -12,7 +12,8 @@
     },
     "content": {
       "type": "richtext",
-      "required": true
+      "required": true,
+      "default": "Insira o seu conteúdo aqui."
     },
     "metadata": {
       "type": "component",
