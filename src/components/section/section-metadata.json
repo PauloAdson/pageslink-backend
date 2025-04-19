@@ -22,8 +22,13 @@
     },
     "color_background": {
       "type": "string",
-      "default": "#0A1128",
+      "default": "#FFFFFF",
       "required": false
+    },
+    "color_text": {
+      "type": "string",
+      "required": true,
+      "default": "#0A1128"
     }
   }
 }

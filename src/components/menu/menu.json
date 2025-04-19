@@ -32,6 +32,9 @@
     },
     "background_menu": {
       "type": "string"
+    },
+    "color_text": {
+      "type": "string"
     }
   }
 }
