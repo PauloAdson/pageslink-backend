@@ -89,3 +89,5 @@ O frontend da aplicação PagesLink se conecta diretamente com este backend. Par
 ## 👨‍💻 Autor
 Paulo Adson
 [Meu portfólio](https://www.pauloadson.com.br/) | [Linkedin](https://www.linkedin.com/in/paulo-adson/)
+
+![screencapture-localhost-1337-admin-content-manager-collection-types-api-page-page-y88i2r2e49extgz5gcnwwqxc-2025-04-20-01_21_51](https://github.com/user-attachments/assets/9beefd0a-08e4-492b-96ea-fd18f472361c)
