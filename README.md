@@ -78,3 +78,11 @@ http://localhost:1337/admin
 
 O frontend da aplicação PagesLink se conecta diretamente com este backend. Para acessar o repositório do frontend:   
 [PagesLink Frontend](https://github.com/PauloAdson/landing-pages-com-react)
+
+## ℹ️ Aviso
+
+> Como o backend pode estar hospedado em servidores gratuitos, o primeiro carregamento após um período de inatividade pode demorar até 1 minuto.
+
+## 👨‍💻 Autor
+Paulo Adson
+[Meu portfólio](https://www.pauloadson.com.br/) | [Linkedin](https://www.linkedin.com/in/paulo-adson/)
