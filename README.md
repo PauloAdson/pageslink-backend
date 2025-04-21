@@ -4,6 +4,11 @@
 
 Este é o repositório do **backend** da aplicação [PagesLink](https://github.com/PauloAdson/landing-pages-com-react), responsável por fornecer e gerenciar o conteúdo das páginas personalizadas através de uma API baseada em **Strapi**.
 
+## ℹ️ Aviso
+
+> O carregamento da página pode demorar um pouco (em torno de 1 minuto) nas primeiras requisições.  
+> Isso acontece porque o servidor utilizado na API está hospedado em um plano gratuito, que pode levar mais tempo para iniciar após um período de inatividade.
+
 O projeto está disponível aqui:   
 👉 [PagesLink](https://pageslink.netlify.app/)
 
@@ -84,9 +89,6 @@ http://localhost:1337/admin
 O frontend da aplicação PagesLink se conecta diretamente com este backend. Para acessar o repositório do frontend:   
 [PagesLink - Front-end](https://github.com/PauloAdson/pageslink)
 
-## ℹ️ Aviso
-
-> Como o backend pode estar hospedado em servidores gratuitos, o primeiro carregamento após um período de inatividade pode demorar até 1 minuto.
 
 ## 👨‍💻 Autor
 Paulo Adson
