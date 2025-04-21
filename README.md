@@ -1,6 +1,6 @@
 # 📦 Backend - PagesLink (Strapi) 
 
-> REPOSITÓRIO OFICIAL
+> ESSE É O REPOSITÓRIO OFICIAL - BACK-END
 
 Este é o repositório do **backend** da aplicação [PagesLink](https://github.com/PauloAdson/landing-pages-com-react), responsável por fornecer e gerenciar o conteúdo das páginas personalizadas através de uma API baseada em **Strapi**.
 
