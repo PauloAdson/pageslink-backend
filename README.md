@@ -82,7 +82,7 @@ http://localhost:1337/admin
 ## Frontend Relacionado
 
 O frontend da aplicação PagesLink se conecta diretamente com este backend. Para acessar o repositório do frontend:   
-[PagesLink Frontend](https://github.com/PauloAdson/landing-pages-com-react)
+[PagesLink - Front-end](https://github.com/PauloAdson/pageslink)
 
 ## ℹ️ Aviso
 
